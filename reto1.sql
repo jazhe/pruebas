@@ -25,15 +25,15 @@ CREATE TABLE clients(
     gender ENUM('M', 'F', 'ND') NOT NULL,
     active TINYINT NOT NULL DEFAULT 1,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
 CREATE TABLE IF NOT EXISTS operations(
-    operation_id [],
-    book_id [],
-    client_id [],
-    operation_type prestado, devuelto, vendido,
-    created_at [],
-    updated_at [],
+    operation_id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    book_id INT UNSIGNED,
+    client_id INT UNSIGNED,
+    operation_type ENUM ('Prestado', 'Devuelto', 'Vendido') NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     finished TINYINT NOT NULL
 );
