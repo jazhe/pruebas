@@ -37,3 +37,15 @@ CREATE TABLE IF NOT EXISTS operations(
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     finished TINYINT NOT NULL
 );
+
+/*Se inserta todo */
+INSERT INTO authors(author_id, name, nationality)
+VALUES(NULL,'Juan Rulfo','MEX');
+
+/*Sólo se insertan los valores en las columnas a usar*/
+INSERT INTO authors(name, nationality)
+VALUES('Gabriel García Márquez','COL');
+
+/*No se nombran las columnas pero se insertan los valores correspondientes*/
+INSERT INTO authors 
+VALUES (NULL,'Juan Gabriel Vasquez','COL'')
