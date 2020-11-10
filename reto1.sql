@@ -48,4 +48,11 @@ VALUES('Gabriel García Márquez','COL');
 
 /*No se nombran las columnas pero se insertan los valores correspondientes*/
 INSERT INTO authors 
-VALUES (NULL,'Juan Gabriel Vasquez','COL'')
+VALUES (NULL,'Juan Gabriel Vasquez','COL');
+
+/*Para insertar varios valores con una sola instrucción*/
+INSERT INTO authors(name, nationality)
+VALUES('Julio Cortazar', 'ARG'), 
+('Isabel Allende', 'CHI'),
+('Octavio Paz', 'MEX'),
+('Juan Carlos Onetti', 'URU');
