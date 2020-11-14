@@ -277,3 +277,5 @@ INSERT INTO `books` VALUES (1,1,'The Startup Playbook',2013,'en',NULL,10.00,1,5,
 (196,104,'Animal Farm',1900,'en',NULL,24.24,1,4,NULL),
 (197,70,'The Idiot',1900,'en',NULL,26.34,1,4,NULL),
 (198,192,'A Christmas Carol',1900,'en',NULL,27.17,1,4,NULL);
+
+INSERT INTO transactions(book_id, client_id, type, created_at) VALUES(6, 76, 'sell', '2018-01-01');
